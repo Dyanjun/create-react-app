@@ -6,13 +6,27 @@
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "antd": "^3.26.17",
+    "aphrodite": "^2.4.0",
+    "axios": "^0.25.0",
+    "crypto-browserify": "^3.12.0",
+    "history": "^5.2.0",
+    "http-proxy-middleware": "^2.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "5.0.0",
+    "redux": "^4.0.5",
+    "redux-storage": "^4.1.2",
+    "redux-storage-engine-localstorage": "^1.1.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT= 8900 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -34,5 +48,21 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "mockjs": "^1.1.0"
+  },
+  "browser": {
+    "crypto": false
   }
 }
