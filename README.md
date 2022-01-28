@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+## 1、运行
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+npm install
 
-## Available Scripts
+npm run start/npm start
 
-In the project directory, you can run:
+项目运行在3000端口（默认），可在浏览器中查看
 
-### `npm start`
+## 2、相关文件说明
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-src：
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+​	--api： 后端请求接口
 
-### `npm test`
+​	--components：自定义可复用的组件
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+​			现已有Footer（页脚）、HeaderWithBack（组件路由返回）、PageWrapper（组件路由控制）、SiderWrapper（侧边菜单）、TitleBar（页眉）
 
-### `npm run build`
+​	--pages：自定义页面
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+​			现已有Home（主页面测试），Test（菜单跳转测试），可根据业务需要增删改
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+​	--mock：数据模拟
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+​	--redux：多组件间共享状态
 
-### `npm run eject`
+​	--utils：工具类
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+​	--router：路由管理
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+​			现已有Home和Test用于路由测试
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+-public 浏览页标题、logo等配置
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+-package.json 一般不需要手动修改，在npm安装依赖包时会自动修改
 
-## Learn More
+-package-lock.json 不需要手动修改
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-eslintrc.json 代码风格和语法的检查规则
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 3、相关依赖版本说明
 
-### Code Splitting
+项目相关依赖版本在package.json中有详细记录，在npm install时，很容易发生版本冲突，请根据具体报错手动更改依赖的版本。
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**package.json中未包含的、初始化时使用的版本有：[不一定需要完全一样， 仅供参考]**
 
-### Analyzing the Bundle Size
+npm 8.3.2
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+node 16.13.2
 
-### Making a Progressive Web App
+webpack 4.44.2
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+webpack-cli 4.9.2
 
-### Advanced Configuration
+## 4、重要工具说明
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+antd：组件库，现在使用的时3.x版本，与4.x版本有较多差异，请谨慎升级
 
-### Deployment
+redux：状态管理器，多组件共享状态时，尽量使用store
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+eslint：代码风格和语法检测工具
 
-### `npm run build` fails to minify
+mock：数据模拟
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 5、create-react-app
+
+本项目使用create-react-app 5.0.0手脚架进行创建，相关内容可查看README-CRA
+
+尽量不要使用npm run eject暴露webpack环境配置，该操作不可逆
+
