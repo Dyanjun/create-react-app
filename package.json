@@ -10,7 +10,7 @@
     "aphrodite": "^2.4.0",
     "axios": "^0.25.0",
     "crypto-browserify": "^3.12.0",
-    "history": "^5.2.0",
+    "history": "^4.9.0",
     "http-proxy-middleware": "^2.0.2",
     "jsonwebtoken": "^8.5.1",
     "less": "^3.10.3",
@@ -19,22 +19,31 @@
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "5.0.0",
-    "redux": "^4.0.5",
+    "react-scripts": "^4.0.3",
+    "redux": "^4.1.2",
     "redux-storage": "^4.1.2",
     "redux-storage-engine-localstorage": "^1.1.4",
+    "stream": "^0.0.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "set PORT= 8900 && react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
+    "extends": "react-app"
+  },
+  "babel": {
+    "plugins": [
+      [
+        "import",
+        {
+          "libraryName": "antd",
+          "style": "css"
+        }
+      ]
     ]
   },
   "browserslist": {
@@ -51,7 +60,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^6.5.1",
+    "eslint": "^7.11.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.18.2",
@@ -60,9 +69,8 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-standard": "^4.0.1",
-    "mockjs": "^1.1.0"
-  },
-  "browser": {
-    "crypto": false
+    "mockjs": "^1.1.0",
+    "webpack": "4.44.2",
+    "webpack-cli": "^4.9.2"
   }
 }

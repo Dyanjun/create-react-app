@@ -3,10 +3,9 @@ import {
   Layout, Button,
 } from 'antd';
 import { StyleSheet, css } from 'aphrodite';
-import {
-  // getToken, getUsername, clearToken,
-  getToken,
-} from '../utils/token';
+// import {
+//   getToken, getUsername, clearToken,
+// } from '../utils/token';
 import history from '../utils/history';
 
 const styles = StyleSheet.create({
@@ -17,6 +16,7 @@ const styles = StyleSheet.create({
   },
   title: {
     flexGrow: 1,
+    color: 'white',
   },
 });
 
@@ -24,15 +24,16 @@ const title = '低代码平台';
 
 const { Header } = Layout;
 
-export default function () {
-  const token = getToken();
+export default function titleBar() {
+  // const token = getToken();
   return (
     <Header className={css(styles.header)}>
       <h2 className={css(styles.title)}>
         {title}
       </h2>
       {
-        token == null ? null : (
+        // token == null ? null : (
+        (
           <>
             <Button
               icon="user"

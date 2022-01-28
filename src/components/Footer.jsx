@@ -14,7 +14,7 @@ const { Footer } = Layout;
 
 const PageFooter = () => (
   <Footer className={css(styles.copyright)}>
-    Copyright © 2022 ist.sjtu.edu.cn. All Rights Reserved.
+    Copyright © 2022 IST. All Rights Reserved.
   </Footer>
 );
 
